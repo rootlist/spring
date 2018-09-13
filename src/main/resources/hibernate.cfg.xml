@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+       <!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">
+            jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+        &lt;!&ndash; 数据库连接池的大小 &ndash;&gt;
+        <property name="connection.pool_size">5</property>
+        &lt;!&ndash; 每次从数据库中取出并放到JDBC的Statement中的记录条数&ndash;&gt;
+        <property name="jdbc.fetch_size">50 </property>
+        &lt;!&ndash;批量插入,删除和更新时每次操作的记录数&ndash;&gt;
+        <property name="jdbc.batch_size">20</property>
+         SQL 方言 -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <!--<property name="current_session_context_class">thread</property>-->
+        <!-- 在控制台输出sql语句 -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="com.entity.StudentEntity"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
